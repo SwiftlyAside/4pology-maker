@@ -39,7 +39,7 @@ const ApologyForm: React.FC<ApologyFormProps> = ({
         /(^(?![0-9]+$)([a-zA-Z가-힣\s]|[0-9a-zA-Z가-힣\s])+$)/,
         '사용할 수 없는 문자를 포함하고 있습니다.'
       )
-      .required('제품명은 반드시 입력해야합니다.'),
+      .required('게임 이름은 반드시 입력해야합니다.'),
     companyName: Yup.string()
       .min(1, '1글자 이상 입력해주세요.')
       .matches(
@@ -57,7 +57,7 @@ const ApologyForm: React.FC<ApologyFormProps> = ({
   })
   return (
     <Box py={5} width="100%">
-      <Heading mb={4}>입력</Heading>
+      <Heading mb={4}>4과문 생성기</Heading>
       <Formik
         initialValues={initialValues}
         validationSchema={ApologyFormSchema}
@@ -85,8 +85,8 @@ const ApologyForm: React.FC<ApologyFormProps> = ({
                   form: { touched, errors, isValid }
                 }: FieldProps) => (
                   <FormControl isInvalid={touched && !isValid}>
-                    <FormLabel>제품명</FormLabel>
-                    <Input {...field} placeholder="제품명을 입력하세요" />
+                    <FormLabel>게임 이름</FormLabel>
+                    <Input {...field} placeholder="게임 이름을 입력하세요" />
                     <FormErrorMessage>
                       {errors.productName as string}
                     </FormErrorMessage>
