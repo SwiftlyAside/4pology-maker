@@ -13,6 +13,10 @@ const MainLayout = ({ children }: MainLayoutProps) => {
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content="4과문 생성기입니다." />
+        <meta
+          name="google-site-verification"
+          content="mVDL7XNAJn891QVh_h12YAl1QWw0jlWSePknZCT-t0o"
+        />
         <link rel="icon" href="/favicon.ico" />
         <meta name="author" content="Chan-soo Kim" />
         <title>4과문 생성기</title>
