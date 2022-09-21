@@ -53,8 +53,9 @@ const Home: NextPage = () => {
       <Container
         backgroundColor={useColorModeValue('whiteAlpha.500', 'blackAlpha.500')}
         borderRadius="lg"
+        boxShadow="base"
         width="100%"
-        minW="container.md"
+        minW={{ md: 'container.md' }}
       >
         {apologyFormValues ? <ApologyView /> : <ApologyForm onOpen={onOpen} />}
       </Container>
